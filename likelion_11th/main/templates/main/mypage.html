@@ -2,11 +2,14 @@
 {% load static %}
 {% block content %}
 
-<div class="profile" style="text-align: center;">
-  <img src="{% static 'images/lion.png' %}"><br>
-  <b>배지현</b><br>
-  🏤 Dongguk Univ ICE <br>
-  🦁 LIKELION 11th Back-end <br>
+<div class="profile">
+  <div class="hello">
+    안녕하세요.<br>
+    배지현입니다.<br>
+  </div>
+  <div class="profileimage">
+    <img src="{% static 'images/lion.png' %}">
+  </div>
 </div>
 
 {% endblock %}

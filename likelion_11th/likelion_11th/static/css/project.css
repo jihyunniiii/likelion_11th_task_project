@@ -1,11 +1,23 @@
-nav {
-    margin-bottom: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+* {
+    font-family: 'Black Han Sans', sans-serif;
 }
 
 img {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    border: 1px solid gray;
+    height: 450px;
+    width: 450px;
+}
+
+.profile {
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 50px;
+    background-color: #ffe06c;
+}
+
+.hello {
+    font-size: 150px;
+    line-height: 100%;
     margin-bottom: 10px;
 }
