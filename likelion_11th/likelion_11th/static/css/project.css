@@ -21,3 +21,42 @@ img {
     line-height: 100%;
     margin-bottom: 10px;
 }
+
+.repo {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.repotitle {
+    color: #ffe06c;
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+
+.repocontainer {
+    display: grid;
+    place-items: center;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 3%;
+    text-align: center;
+}
+
+.itemimg {
+    font-size: 50px;
+}
+
+.itemtitle {
+    font-size: 25px;
+}
