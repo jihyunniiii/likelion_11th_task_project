@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mypage, name="mypage"),
     path('repo', views.repopage, name="repopage"),
+    path('board', views.boardpage, name="boardpage"),
 ]

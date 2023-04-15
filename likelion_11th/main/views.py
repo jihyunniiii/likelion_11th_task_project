@@ -7,3 +7,6 @@ def mypage(request):
 
 def repopage(request):
     return render(request, 'main/repopage.html')
+
+def boardpage(request):
+    return render(request, 'main/boardpage.html')
