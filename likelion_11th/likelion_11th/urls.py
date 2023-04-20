@@ -21,6 +21,8 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mypage, name="mypage"),
-    path('repo', views.repopage, name="repopage"),
-    path('board', views.boardpage, name="boardpage"),
+    path('repo/', views.repopage, name="repopage"),
+    path('board/', views.boardpage, name="boardpage"),
+    path('newpost/', views.newpostpage, name="newpostpage"),
+    path('create/', views.create, name="create"),
 ]
