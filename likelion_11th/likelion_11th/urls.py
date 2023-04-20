@@ -25,4 +25,5 @@ urlpatterns = [
     path('board/', views.boardpage, name="boardpage"),
     path('newpost/', views.newpostpage, name="newpostpage"),
     path('create/', views.create, name="create"),
+    path('<int:id>', views.postdetailpage, name="postdetailpage"),
 ]

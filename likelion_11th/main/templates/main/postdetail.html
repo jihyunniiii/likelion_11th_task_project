@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>{{post.title}}</h1>
+작성자 : {{post.writer}}
+날짜 : {{post.pub_date}}
+<hr>
+<p>소감 : {{post.body}}</p>
+<p>보완할 점 : {{post.feedback}}</p>
+<p>좋은 점 : {{post.good_point}}</p>
+
+{% endblock %}

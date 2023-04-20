@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from django.utils import timezone
 
@@ -11,10 +11,15 @@ def repopage(request):
     return render(request, 'main/repopage.html')
 
 def boardpage(request):
-    return render(request, 'main/boardpage.html')
+    posts = Post.objects.all()
+    return render(request, 'main/boardpage.html', {'posts':posts})
 
 def newpostpage(request):
     return render(request, 'main/newpostpage.html')
+
+def postdetailpage(request, id):
+    post = get_object_or_404(Post, pk = id)
+    return render(request, 'main/postdetail.html', {'post':post})
 
 def create(request):
     new_post = Post()
@@ -27,4 +32,4 @@ def create(request):
 
     new_post.save()
 
-    return redirect('detail', new_post.id)
+    return redirect('postdetailpage', new_post.id)
