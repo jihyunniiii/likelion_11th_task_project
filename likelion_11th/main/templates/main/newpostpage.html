@@ -4,12 +4,24 @@
 
 <form action="{%url 'create'%}" method="POST">
     {%csrf_token%}
-    <p>제목 : <input type="text" name="title"></p>
-    <p>작성자 : <input type="text" name="writer"></p>
-    <p>소감 : <textarea type="text" name="body" id="" cols="30" rows="10"></textarea></p>
-    <p>보완할 점 : <textarea type="text" name="feedback" cols="30" rows="10"></textarea></p>
-    <p>좋은 점 : <textarea type="text" name="good_point" cols="30" rows="10"></textarea></p>
-    <button type="submit">작성</button>
+    <div class="post">
+        <div class="writing">
+            글 작성
+        </div>
+        <div class="input">
+            <label>제목</label>
+            <input type="text" name="title" />
+            <label>작성자</label>
+            <input type="text" name="writer" />
+            <label>소감</label>
+            <textarea type="text" name="body" id="" cols="100" rows="10"></textarea>
+            <label>보완할 점</label>
+            <textarea type="text" name="feedback" cols="100" rows="5"></textarea>
+            <label>좋은 점</label>
+            <textarea type="text" name="good_point" cols="100" rows="5"></textarea>
+            <button class="submit" type="submit">작성</button>
+        </div>
+    </div>
 </form>
 
 {% endblock %}
