@@ -140,3 +140,37 @@ textarea {
     border: none;
     outline: none;
 }
+
+.postdetail {
+    background-color: #f5f5f5;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.posttitle {
+    font-family: 'Black Han Sans', sans-serif;
+    text-align: center;
+    color: #ffe06c;
+    font-size: 80px;
+}
+
+.postcontentinfo {
+    text-align: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-right: 150px;
+}
+
+.postcontenttitle {
+    text-align: left;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 25px;
+    margin-left: 150PX;
+}
+
+.postcontentcontent {
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 150PX;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

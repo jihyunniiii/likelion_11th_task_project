@@ -2,12 +2,33 @@
 {% load static %}
 {% block content %}
 
-<h1>{{post.title}}</h1>
-작성자 : {{post.writer}}
-날짜 : {{post.pub_date}}
-<hr>
-<p>소감 : {{post.body}}</p>
-<p>보완할 점 : {{post.feedback}}</p>
-<p>좋은 점 : {{post.good_point}}</p>
+<div class="postdetail">
+    <div class="posttitle">{{post.title}}</div>
+    <div class="postcontent">
+        <div class="postcontentinfo">
+            <b>작성자 </b>{{post.writer}}<br>
+            <b>날짜 </b>{{post.pub_date}}
+        </div>
+        <hr>
+        <div class="postcontenttitle">
+            소감
+        </div>
+        <div class="postcontentcontent">
+            {{post.body}}
+        </div>
+        <div class="postcontenttitle">
+            보완할 점
+        </div>
+        <div class="postcontentcontent">
+            {{post.feedback}}
+        </div>
+        <div class="postcontenttitle">
+            좋은 점
+        </div>
+        <div class="postcontentcontent">
+            {{post.good_point}}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
