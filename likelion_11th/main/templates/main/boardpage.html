@@ -2,20 +2,34 @@
 {% load static %}
 {% block content %}
 
-<a href="{%url 'newpostpage' %}">글쓰기</a>
-
-<h1>방명록</h1>
-
-<div>
-    {% for post in posts %} 
-    <div>
-        <h3>{{post.title}}</h3>
-        {{post.writer}}<br>
-        {{post.titlesummary}}
-        <a href="{% url 'postdetailpage' post.id %}">자세히</a>
-        <br>
+<div class="boardpage">
+    <div class="boardpagetitle">방명록</div>
+    <div class="writebtn">
+        <a class="btn" href="{%url 'newpostpage' %}">글 작성</a>
     </div>
-    {% endfor %}
-</div>
+
+    <div class="boardtable">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>날짜</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr>
+                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.id}}</td>
+                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.title}}</td>
+                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.writer}}</td>
+                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.pub_date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+<div>
 
 {% endblock %}
