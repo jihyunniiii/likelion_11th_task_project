@@ -1,6 +1,10 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-<form action="{% url 'main:update' post.id %}" method="POST">
+<form
+    action="{% url 'main:update' post.id %}"
+    method="POST"
+    enctype="multipart/form-data"
+>
     {%csrf_token%}
     <div class="post">
         <div class="writing">글 수정</div>
@@ -9,6 +13,8 @@
             <input type="text" name="title" value="{{post.title}}" />
             <label>작성자</label>
             <input type="text" name="writer" value="{{post.writer}}" />
+            <label>이미지</label>
+            <input type="file" name="image" />
             <label>소감</label>
             <textarea type="text" name="body" id="" cols="100" rows="10">
 {{post.body}}</textarea

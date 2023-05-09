@@ -47,6 +47,9 @@ def update(request, id):
     update_post.body = request.POST['body']
     update_post.feedback = request.POST['feedback']
     update_post.good_point = request.POST['good_point']
+    if request.FILES.get('image') != None:
+        update_post.image = request.FILES.get('image')
+
     update_post.save()
     return redirect('main:postdetailpage', update_post.id)
 
