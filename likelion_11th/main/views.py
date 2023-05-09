@@ -29,6 +29,7 @@ def create(request):
     new_post.body = request.POST['body']
     new_post.feedback = request.POST['feedback']
     new_post.good_point = request.POST['good_point']
+    new_post.image = request.FILES.get('image')
 
     new_post.save()
 

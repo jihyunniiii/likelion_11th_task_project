@@ -220,3 +220,12 @@ a.btn {
     margin-right: 150px;
     margin-bottom: 10px;
 }
+
+.inputimage {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.postimage {
+    margin: auto;
+    display: block;
+}

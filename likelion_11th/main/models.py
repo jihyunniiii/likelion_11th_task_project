@@ -9,6 +9,7 @@ class Post(models.Model):
     body = models.TextField()
     feedback = models.TextField()
     good_point = models.TextField()
+    image = models.ImageField(upload_to="post/", blank=True, null=True)
 
     def __str__(self):
         return self.title

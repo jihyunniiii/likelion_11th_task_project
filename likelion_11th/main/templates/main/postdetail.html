@@ -8,6 +8,9 @@
             <b>날짜 </b>{{post.pub_date}}
         </div>
         <hr />
+        {% if post.image %}
+        <p><img class="postimage" src="{{post.image.url}}" alt="사진" /></p>
+        {% endif %}
         <div class="postcontenttitle">소감</div>
         <div class="postcontentcontent">{{post.body}}</div>
         <div class="postcontenttitle">보완할 점</div>
