@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400&display=swap");
 
 img {
     height: 450px;
@@ -6,15 +6,15 @@ img {
 }
 
 .navbar-brand {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
 }
 
 .nav-item {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
 }
 
 .profile {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     text-align: center;
     padding-top: 110px;
     padding-bottom: 50px;
@@ -35,7 +35,7 @@ img {
 }
 
 .repotitle {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     color: #ffe06c;
     font-size: 80px;
     margin-bottom: 50px;
@@ -64,12 +64,12 @@ img {
 }
 
 .itemtitle {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     font-size: 25px;
 }
 
 .itemdescription {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 .post {
@@ -80,7 +80,7 @@ img {
 }
 
 .writing {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     color: #ffe06c;
     font-size: 80px;
     margin-bottom: 50px;
@@ -94,7 +94,7 @@ img {
 }
 
 label {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     font-size: 25px;
     margin-top: 4px;
     margin-bottom: 4px;
@@ -105,7 +105,7 @@ label {
 }
 
 input {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     padding: 10px;
     padding-left: 20px;
     height: 50px;
@@ -117,7 +117,7 @@ input {
 }
 
 textarea {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     padding: 10px;
     padding-left: 20px;
     height: 200px;
@@ -129,7 +129,7 @@ textarea {
 }
 
 .submit {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     color: black;
     margin-top: 20px;
     background-color: #ffe06c;
@@ -148,7 +148,7 @@ textarea {
 }
 
 .posttitle {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     text-align: center;
     color: #ffe06c;
     font-size: 80px;
@@ -156,23 +156,23 @@ textarea {
 
 .postcontentinfo {
     text-align: right;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     margin-right: 150px;
     margin-bottom: 30px;
 }
 
 .postcontenttitle {
     text-align: left;
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     font-size: 25px;
     margin-top: 35px;
-    margin-left: 150PX;
+    margin-left: 150px;
 }
 
 .postcontentcontent {
     text-align: left;
-    font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 150PX;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-left: 150px;
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -184,21 +184,21 @@ textarea {
 }
 
 .boardpagetitle {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     text-align: center;
     color: #ffe06c;
     font-size: 80px;
 }
 
 .boardtable {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     margin-left: 150px;
     margin-right: 150px;
 }
 
 .writebtn {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: "Black Han Sans", sans-serif;
     text-align: right;
     margin-left: 150px;
     margin-right: 150px;
@@ -210,4 +210,13 @@ a.btn {
     background-attachment: fixed;
     background-color: #ffe06c;
     color: black;
+}
+
+.editbutton {
+    font-family: "Black Han Sans", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 10px;
 }

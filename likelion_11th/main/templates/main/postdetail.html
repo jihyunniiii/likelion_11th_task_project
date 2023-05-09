@@ -1,33 +1,22 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <div class="postdetail">
     <div class="posttitle">{{post.title}}</div>
     <div class="postcontent">
         <div class="postcontentinfo">
-            <b>작성자 </b>{{post.writer}}<br>
+            <b>작성자 </b>{{post.writer}}<br />
             <b>날짜 </b>{{post.pub_date}}
         </div>
-        <hr>
-        <div class="postcontenttitle">
-            소감
-        </div>
-        <div class="postcontentcontent">
-            {{post.body}}
-        </div>
-        <div class="postcontenttitle">
-            보완할 점
-        </div>
-        <div class="postcontentcontent">
-            {{post.feedback}}
-        </div>
-        <div class="postcontenttitle">
-            좋은 점
-        </div>
-        <div class="postcontentcontent">
-            {{post.good_point}}
-        </div>
+        <hr />
+        <div class="postcontenttitle">소감</div>
+        <div class="postcontentcontent">{{post.body}}</div>
+        <div class="postcontenttitle">보완할 점</div>
+        <div class="postcontentcontent">{{post.feedback}}</div>
+        <div class="postcontenttitle">좋은 점</div>
+        <div class="postcontentcontent">{{post.good_point}}</div>
+    </div>
+    <div class="editbutton">
+        <a class="btn" href="{% url 'main:edit' post.id %}">글 수정</a>
     </div>
 </div>
 

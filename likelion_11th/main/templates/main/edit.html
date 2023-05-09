@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<form action="{% url 'main:update' post.id %}" method="POST">
+    {%csrf_token%}
+    <div class="post">
+        <div class="writing">글 수정</div>
+        <div class="input">
+            <label>제목</label>
+            <input type="text" name="title" value="{{post.title}}" />
+            <label>작성자</label>
+            <input type="text" name="writer" value="{{post.writer}}" />
+            <label>소감</label>
+            <textarea type="text" name="body" id="" cols="100" rows="10">
+{{post.body}}</textarea
+            >
+            <label>보완할 점</label>
+            <textarea type="text" name="feedback" cols="100" rows="5">
+{{post.feedback}}</textarea
+            >
+            <label>좋은 점</label>
+            <textarea type="text" name="good_point" cols="100" rows="5">
+{{post.good_point}}</textarea
+            >
+            <button class="submit" type="submit">작성</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
