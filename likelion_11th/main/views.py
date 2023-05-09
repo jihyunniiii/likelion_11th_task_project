@@ -48,3 +48,8 @@ def update(request, id):
     update_post.good_point = request.POST['good_point']
     update_post.save()
     return redirect('main:postdetailpage', update_post.id)
+
+def delete(request, id):
+    delete_post = Post.objects.get(id=id)
+    delete_post.delete()
+    return redirect('main:boardpage')
