@@ -1,24 +1,36 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-<form action="{%url 'create'%}" method="POST">
+<form action="{%url 'main:create'%}" method="POST">
     {%csrf_token%}
     <div class="post">
-        <div class="writing">
-            글 작성
-        </div>
+        <div class="writing">글 작성</div>
         <div class="input">
             <label>제목</label>
             <input type="text" name="title" />
             <label>작성자</label>
             <input type="text" name="writer" />
             <label>소감</label>
-            <textarea type="text" name="body" id="" cols="100" rows="10"></textarea>
+            <textarea
+                type="text"
+                name="body"
+                id=""
+                cols="100"
+                rows="10"
+            ></textarea>
             <label>보완할 점</label>
-            <textarea type="text" name="feedback" cols="100" rows="5"></textarea>
+            <textarea
+                type="text"
+                name="feedback"
+                cols="100"
+                rows="5"
+            ></textarea>
             <label>좋은 점</label>
-            <textarea type="text" name="good_point" cols="100" rows="5"></textarea>
+            <textarea
+                type="text"
+                name="good_point"
+                cols="100"
+                rows="5"
+            ></textarea>
             <button class="submit" type="submit">작성</button>
         </div>
     </div>

@@ -32,4 +32,4 @@ def create(request):
 
     new_post.save()
 
-    return redirect('postdetailpage', new_post.id)
+    return redirect('main:postdetailpage', new_post.id)

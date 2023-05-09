@@ -1,11 +1,9 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <div class="boardpage">
     <div class="boardpagetitle">방명록</div>
     <div class="writebtn">
-        <a class="btn" href="{%url 'newpostpage' %}">글 작성</a>
+        <a class="btn" href="{%url 'main:newpostpage' %}">글 작성</a>
     </div>
 
     <div class="boardtable">
@@ -21,15 +19,30 @@
             <tbody>
                 {% for post in posts %}
                 <tr>
-                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.id}}</td>
-                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.title}}</td>
-                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.writer}}</td>
-                    <td onclick="location.href='{% url 'postdetailpage' post.id %}'">{{post.pub_date}}</td>
+                    <td
+                        onclick="location.href='{% url 'main:postdetailpage' post.id %}'"
+                    >
+                        {{post.id}}
+                    </td>
+                    <td
+                        onclick="location.href='{% url 'main:postdetailpage' post.id %}'"
+                    >
+                        {{post.title}}
+                    </td>
+                    <td
+                        onclick="location.href='{% url 'main:postdetailpage' post.id %}'"
+                    >
+                        {{post.writer}}
+                    </td>
+                    <td
+                        onclick="location.href='{% url 'main:postdetailpage' post.id %}'"
+                    >
+                        {{post.pub_date}}
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-<div>
-
-{% endblock %}
+    <div>{% endblock %}</div>
+</div>
