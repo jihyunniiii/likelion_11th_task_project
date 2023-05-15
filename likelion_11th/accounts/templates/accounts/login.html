@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<form action="{%url 'accounts:login'%}" method="POST">
+    {%csrf_token%}
+    <div class="login">
+        <div class="logintitle">LOGIN</div>
+        <div class="input">
+            <label>ID</label>
+            <input type="text" name="id" />
+            <label>비밀번호</label>
+            <input type="text" name="password" />
+            <button class="submit" type="submit">로그인</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="postdetail">
+    <div class="posttitle">MY PAGE</div>
+    <div class="postcontent">
+        <div class="postcontenttitle">닉네임</div>
+        <div class="postcontentcontent">{{user.profile.nickname}}</div>
+        <div class="postcontenttitle">학과</div>
+        <div class="postcontentcontent">{{user.profile.department}}</div>
+        <div class="postcontenttitle">취미</div>
+        <div class="postcontentcontent">{{user.profile.hobby}}</div>
+    </div>
+</div>
+
+{% endblock %}

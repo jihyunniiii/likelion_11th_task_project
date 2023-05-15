@@ -229,3 +229,17 @@ a.btn {
     margin: auto;
     display: block;
 }
+
+.logintitle {
+    font-family: "Black Han Sans", sans-serif;
+    color: #ffe06c;
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+
+.login {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
