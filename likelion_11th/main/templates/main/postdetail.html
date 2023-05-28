@@ -24,6 +24,25 @@
         <a class="btn" href="{% url 'main:delete' post.id %}">글 삭제</a>
     </div>
     {% endif %}
+    <div class="comment_container">
+        <div class="buttons">
+            <form method="post" href="{% url 'main:postdetailpage' post.id %}">
+                {% csrf_token %}
+                <input class="inputcontent" type="text" name="content" />
+                <button class="submit" type="submit">작성</button>
+            </form>
+        </div>
+    </div>
+    <div class="comment_list">
+        {% for comment in comments %}
+        <hr>
+        <div class="commentcontent">{{comment.content}}</div>
+        <div class="commentdetail">{{comment.writer}}  {{comment.pub_date}}</div>
+            {% if comment.writer == user %}
+            <a class="btn" href="{% url 'main:commentdelete' post.id comment.id %}">삭제</a>
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

@@ -17,3 +17,12 @@ class Post(models.Model):
     
     def titlesummary(self):
         return self.body[:20]
+    
+class Comment(models.Model):
+    content = models.TextField()
+    pub_date = models.DateTimeField()
+    writer = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, null=False, blank=False, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.post.title+" : "+self.content[:20]

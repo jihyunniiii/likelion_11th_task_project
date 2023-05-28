@@ -243,3 +243,24 @@ a.btn {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
+.inputcontent {
+    font-family: "Noto Sans KR", sans-serif;
+    margin-bottom: 10px;
+}
+
+.commentcontent {
+    text-align: left;
+    font-family: "Black Han Sans", sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+.commentdetail {
+    text-align: left;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-left: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

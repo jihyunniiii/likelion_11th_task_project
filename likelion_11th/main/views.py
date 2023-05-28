@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Post
+from .models import Post, Comment
 from django.utils import timezone
 
 # Create your views here.
@@ -19,7 +19,20 @@ def newpostpage(request):
 
 def postdetailpage(request, id):
     post = get_object_or_404(Post, pk = id)
-    return render(request, 'main/postdetail.html', {'post':post})
+    if request.method == 'GET':
+        comments = Comment.objects.filter(post=post)
+        return render(request, 'main/postdetail.html', {
+            'post':post,
+            'comments':comments,
+        })
+    elif request.method == "POST":
+        new_comment = Comment()
+        new_comment.post = post
+        new_comment.writer = request.user
+        new_comment.content = request.POST['content']
+        new_comment.pub_date = timezone.now()
+        new_comment.save()
+        return redirect('main:postdetailpage', id)
 
 def create(request):
     if request.user.is_authenticated:
@@ -62,3 +75,8 @@ def delete(request, id):
     delete_post = Post.objects.get(id=id)
     delete_post.delete()
     return redirect('main:boardpage')
+
+def commentdelete(request, commentid, postid):
+    delete_comment = Comment.objects.get(id=commentid)
+    delete_comment.delete()
+    return redirect('main:postdetailpage', postid)
