@@ -2,9 +2,11 @@
 
 <div class="boardpage">
     <div class="boardpagetitle">방명록</div>
+    {% if user.is_authenticated %}
     <div class="writebtn">
         <a class="btn" href="{%url 'main:newpostpage' %}">글 작성</a>
     </div>
+    {% endif %}
 
     <div class="boardtable">
         <table class="table">
