@@ -3,5 +3,5 @@ from .views import *
 
 app_name = "user"
 urlpatterns = [
-    path('usermypage/', mypage, name="mypage"),
+    path('usermypage/<int:id>/', mypage, name="mypage"),
 ]
