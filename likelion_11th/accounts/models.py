@@ -8,3 +8,4 @@ class Profile(models.Model):
     nickname = models.TextField(max_length=10)
     department = models.TextField(null=True, max_length=30)
     hobby = models.TextField(null=True, max_length=30)
+    followings = models.ManyToManyField("self", related_name="followers", symmetrical=False)

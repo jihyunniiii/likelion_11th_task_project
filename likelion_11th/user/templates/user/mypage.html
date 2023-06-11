@@ -1,7 +1,26 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 <div class="postdetail">
-    <div class="posttitle">MY PAGE</div>
+    <div class="posttitle">{{user.username}}</div>
+    {% if request.user != user %}
+        {% if request.user.profile in user.profile.followers.all %}
+            <a href="{% url 'user:follow' user.id %}"><button type="button" class="btn btn-outline-info">언팔로우</button></a>
+        {% else %}
+            <a href="{% url 'user:follow' user.id %}"><button type="button" class="btn btn-info">팔로우</button></a>
+        {% endif %}
+    {% endif %}
+
+
+    <p>팔로워 <br> {{user.profile.followers.count}}명 </p>
+    {% for follower in user.profile.followers.all %} 
+        <a href="{% url 'user:mypage' follower.user.id %}">{{ follower.user.username }}</a>
+    {% endfor %}
+
+    <p>팔로잉 <br> {{user.profile.followings.count}}명 </p>
+    {% for following in user.profile.followings.all %} 
+        <a href="{% url 'user:mypage' following.user.id %}">{{ following.user.username }}</a>
+    {% endfor %}
+
     <div class="postcontent">
         <div class="postcontenttitle">닉네임</div>
         <div class="postcontentcontent">{{user.profile.nickname}}</div>
@@ -9,6 +28,12 @@
         <div class="postcontentcontent">{{user.profile.department}}</div>
         <div class="postcontenttitle">취미</div>
         <div class="postcontentcontent">{{user.profile.hobby}}</div>
+    </div>
+
+    <div>
+        {% for blog in blogs %}
+        <a href="{% url 'main:showdetail' blog.id %}">{{blog.title}}</a>
+        {% endfor %}
     </div>
 </div>
 
