@@ -2,24 +2,29 @@
 
 <div class="postdetail">
     <div class="posttitle">{{user.username}}</div>
-    {% if request.user != user %}
-        {% if request.user.profile in user.profile.followers.all %}
-            <a href="{% url 'user:follow' user.id %}"><button type="button" class="btn btn-outline-info">언팔로우</button></a>
-        {% else %}
-            <a href="{% url 'user:follow' user.id %}"><button type="button" class="btn btn-info">팔로우</button></a>
-        {% endif %}
-    {% endif %}
+    <div class="postcontent">
+        <div class="postcontentinfo">
+            {% if request.user != user %}
+                {% if request.user.profile in user.profile.followers.all %}
+                    <a class="btn" href="{% url 'user:follow' user.id %}">언팔로우</a>
+                {% else %}
+                    <a class="btn" href="{% url 'user:follow' user.id %}">팔로우</a>
+                {% endif %}
+            {% endif %}
+            <br>
+            
+            <b>팔로워 </b>{{user.profile.followers.count}}명 <br>
+            {% for follower in user.profile.followers.all %} 
+                <a href="{% url 'user:mypage' follower.user.id %}">{{ follower.user.username }}</a> <br>
+            {% endfor %}
 
-
-    <p>팔로워 <br> {{user.profile.followers.count}}명 </p>
-    {% for follower in user.profile.followers.all %} 
-        <a href="{% url 'user:mypage' follower.user.id %}">{{ follower.user.username }}</a>
+            <b>팔로잉 </b>{{user.profile.followings.count}}명 <br>
+            {% for following in user.profile.followings.all %} 
+                <a href="{% url 'user:mypage' following.user.id %}">{{ following.user.username }}</a> <br>
     {% endfor %}
+        </div>
+    </div>
 
-    <p>팔로잉 <br> {{user.profile.followings.count}}명 </p>
-    {% for following in user.profile.followings.all %} 
-        <a href="{% url 'user:mypage' following.user.id %}">{{ following.user.username }}</a>
-    {% endfor %}
 
     <div class="postcontent">
         <div class="postcontenttitle">닉네임</div>
@@ -28,12 +33,12 @@
         <div class="postcontentcontent">{{user.profile.department}}</div>
         <div class="postcontenttitle">취미</div>
         <div class="postcontentcontent">{{user.profile.hobby}}</div>
-    </div>
-
-    <div>
-        {% for blog in blogs %}
-        <a href="{% url 'main:showdetail' blog.id %}">{{blog.title}}</a>
-        {% endfor %}
+        <div class="postcontenttitle">작성한 글</div>
+        <div class="postcontentcontent">
+            {% for post in posts %}
+            <a href="{% url 'main:postdetailpage' post.id %}">{{post.title}}</a>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
