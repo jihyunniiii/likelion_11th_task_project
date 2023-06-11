@@ -80,3 +80,15 @@ def commentdelete(request, commentid, postid):
     delete_comment = Comment.objects.get(id=commentid)
     delete_comment.delete()
     return redirect('main:postdetailpage', postid)
+
+def likes(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if request.user in post.like.all():
+        post.like.remove(request.user)
+        post.like_count -= 1
+        post.save()
+    else:
+        post.like.add(request.user)
+        post.like_count += 1
+        post.save()
+    return redirect('main:postdetailpage', post.id)

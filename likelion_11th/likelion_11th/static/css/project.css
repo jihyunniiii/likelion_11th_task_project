@@ -264,3 +264,10 @@ a.btn {
     margin-top: 5px;
     margin-bottom: 10px;
 }
+
+.like {
+    font-family: "Black Han Sans", sans-serif;
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

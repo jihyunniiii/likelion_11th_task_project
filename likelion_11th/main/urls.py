@@ -12,5 +12,6 @@ urlpatterns = [
     path('edit/<int:id>', edit, name="edit"),
     path('update/<int:id>', update, name="update"),
     path('delete/<int:id>', delete, name="delete"),
-    path('commentdelete/<int:postid>/<int:commentid>', commentdelete, name="commentdelete")
+    path('commentdelete/<int:postid>/<int:commentid>', commentdelete, name="commentdelete"),
+    path('likes/<int:post_id>', likes, name="likes"),
 ]
